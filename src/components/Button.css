@@ -1,0 +1,28 @@
+.Button {
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #fdcb08;
+  border-radius: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  font-size: 14px;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.Button_size_default {
+  min-width: 200px;
+  padding: 16px 35px;
+}
+
+.Button_size_sm {
+  min-width: 100px;
+  padding: 8px 16px;
+}
+
+.Button:hover {
+  color: #a01c8b;
+}

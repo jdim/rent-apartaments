@@ -1,0 +1,7 @@
+.CompanyLogo {
+  background-image: url('../assets/images/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 70px;
+}

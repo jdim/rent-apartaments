@@ -1,0 +1,44 @@
+.HeaderSection {
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-color: white;
+  position: relative;
+  padding-top: 25vh;
+  padding-bottom: 1px;
+}
+
+.HeaderSection-Content {
+  position: relative;
+  margin-right: 35%;
+}
+
+.HeaderSection-PreTitle {
+  text-transform: uppercase;
+}
+
+.HeaderSection-Title {
+  font-size: 36px;
+}
+
+.Header-Line {
+  width: 60px;
+  height: 5px;
+  background-color: #fdcb08;
+}
+
+.HeaderSection-Preview {
+  position: absolute;
+  top: 0;
+  left: 65%;
+  width: 35%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 1200px) {
+  .HeaderSection {
+    min-height: unset;
+    padding-bottom: 40px;
+  }
+}
