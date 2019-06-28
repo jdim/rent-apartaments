@@ -4,7 +4,8 @@ import {
   FETCH_APARTMENTS_REQUEST,
   FETCH_APARTMENTS_SUCCESS,
   APPLY_APARTMENTS_FILTER,
-  DefaultApartmentsFilter
+  DefaultApartmentsFilter,
+  FETCH_FAILURE
 } from '../actions';
 
 const apartmentsFilter = (state = DefaultApartmentsFilter, action) => {
@@ -34,7 +35,17 @@ const apartments = (
   }
 };
 
+const error = (state = { msg: '', error: null }, action) => {
+  switch (action.type) {
+    case FETCH_FAILURE:
+      return { ...state, msg: action.msg, error: action.error };
+    default:
+      return state;
+  }
+};
+
 export default combineReducers({
   apartmentsFilter,
-  apartments
+  apartments,
+  error
 });

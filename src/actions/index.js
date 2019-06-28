@@ -13,7 +13,15 @@ export const fetchApartments = filter => dispatch => {
   dispatch({ type: FETCH_APARTMENTS_REQUEST });
   apartmentsApi
     .getList(filter)
-    .then(data => dispatch(fetchApartmentsSuccess(data)));
+    .then(data => dispatch(fetchApartmentsSuccess(data)))
+    .catch(err =>
+      dispatch(
+        fetchFailure(
+          'An error occurred then fetching apartments, please try later',
+          err
+        )
+      )
+    );
 };
 
 // Apartments filter
@@ -33,3 +41,10 @@ export const DefaultApartmentsFilter = {
   pets: false,
   price: [60, 200]
 };
+
+export const FETCH_FAILURE = 'FETCH_FAILURE';
+const fetchFailure = (msg, error) => ({
+  type: FETCH_FAILURE,
+  msg,
+  error
+});
